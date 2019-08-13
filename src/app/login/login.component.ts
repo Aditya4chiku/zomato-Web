@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
       },
       err =>{
         console.log(err);
+        alert("Pls Enter Correct email or password")
       }
     );
   }

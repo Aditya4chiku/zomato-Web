@@ -17,6 +17,12 @@ resturantList:any
     this.getResturant()
   }
 
+
+  onAddFav(value:any)
+  {
+    console.log(value)
+  }
+
 getResturant():void 
 {
   this._resturantService.getResturantList().subscribe(list=>{

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  url = "http://localhost:3000/api"
+  url = "http://localhost:3000/api/user"
   constructor(private http: HttpClient,private router:Router) { }
   
 
@@ -34,12 +34,16 @@ export class AuthService {
 
 
 
+  RegisterUser=(user)=>
+  {
+  return this.http.post(this.url +'/register',user )
+  }
 
 
 
   ValidateUSer = (user) => {
 
-    return this.http.post(this.url + '/user/validate', user);
+    return this.http.post(this.url + '/validate', user);
   }
 
 }

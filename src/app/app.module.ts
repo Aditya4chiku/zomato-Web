@@ -14,6 +14,9 @@ import { AuthService } from './service/auth.service';
 import { HomeComponent } from './home/home.component';
 import { ResturantCardComponent } from './resturant-card/resturant-card.component';
 import { ResturantListComponent } from './resturant-list/resturant-list.component';
+import { FooterComponent } from './footer/footer.component';
+import { FavourateComponent } from './favourate/favourate.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -25,6 +28,9 @@ import { ResturantListComponent } from './resturant-list/resturant-list.componen
     HomeComponent,
     ResturantCardComponent,
     ResturantListComponent,
+    FooterComponent,
+    FavourateComponent,
+    RegisterComponent,
 
    
  

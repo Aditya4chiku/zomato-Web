@@ -18,6 +18,8 @@ router.get('/resturant',(req,res)=>{
 
 })
 
+
+
 router.post('/resturant',(req,res)=>{
    let resturant=new resturantModel({
        name:req.body.name,
@@ -30,4 +32,21 @@ router.post('/resturant',(req,res)=>{
    })
 
 })
+
+router.get('/resturant/:id',(req,res)=>{
+    resturantModel.findByIdAndRemove({_id:req.params.id},(err,resturant)=>{
+     
+        if(err)
+        {
+            res.json(err);
+            res.statusCode=500
+        }
+        else
+        {
+            
+            res.json('Succesfullty delete');
+        }
+    })
+})
+
 module.exports=router

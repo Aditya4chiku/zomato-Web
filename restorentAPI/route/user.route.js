@@ -3,7 +3,24 @@ const express=require('express');
 const userRoute=express.Router();
 
 
+userRoute.post('/register',(req,res)=>{
+       if(!req.body)
+{
+    res.json("pls eneter data")
+}
+   let use =new userSchema({
+       username:req.body.username,
+       password:req.body.password
+   })
+   use.save().then(data=>{
+       res.json("Saved new user")
+       console.log(data)
+   }).catch((err)=>{
+       console.log(err);
+       res.send(err);
+   })
 
+})
 
 userRoute.post('/validate',(req,res)=>{
     
